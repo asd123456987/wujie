@@ -60,7 +60,7 @@
     "webpack-cli": "^4.8.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://packages.aliyun.com/60b491997db6c7317ae87dbc/npm/npm-registry/"
   },
   "eslintIgnore": [
     "*.js"

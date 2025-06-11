@@ -190,7 +190,7 @@ export function fixElementCtrSrcOrHref(
   elementCtr.prototype.setAttribute = function (name: string, value: string): void {
     let targetValue = value;
     if (name === attr) targetValue = getAbsolutePath(value, this.baseURI || "", true);
-    rawElementSetAttribute.call(this, name, targetValue);
+    if (name !== "!") rawElementSetAttribute.call(this, name, targetValue);
   };
   // patch href get and set
   const rawAnchorElementHrefDescriptor = Object.getOwnPropertyDescriptor(elementCtr.prototype, attr);
